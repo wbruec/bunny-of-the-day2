@@ -1,0 +1,46 @@
+<main class="page">
+  <header class="site-header">
+    <h1 class="title">bunny of the day</h1>
+    <p class="tagline">ein bun für mein bun</p>
+  </header>
+
+  <!-- Loading shimmer -->
+  <div class="card shimmer-card" *ngIf="loading" aria-label="Loading today's bunny...">
+    <div class="shimmer-image"></div>
+    <div class="shimmer-lines">
+      <div class="shimmer-line wide"></div>
+      <div class="shimmer-line narrow"></div>
+    </div>
+  </div>
+
+  <!-- Error state -->
+  <div class="card error-card" *ngIf="!loading && error" role="alert">
+    <span class="error-icon">&#128048;</span>
+    <p class="error-message">{{ error }}</p>
+  </div>
+
+  <!-- Bunny card -->
+  <div class="card bunny-card" *ngIf="!loading && bunny">
+    <a [href]="bunny.largeImageUrl" target="_blank" rel="noopener noreferrer" class="image-link">
+      <img
+        [src]="bunny.imageUrl"
+        [alt]="'A bunny photo: ' + bunny.tags"
+        class="bunny-image"
+      />
+    </a>
+    <div class="card-footer">
+      <p class="photo-credit">
+        Photo by
+        <a [href]="bunny.pageUrl" target="_blank" rel="noopener noreferrer">{{ bunny.photographer }}</a>
+        on
+        <a href="https://pixabay.com" target="_blank" rel="noopener noreferrer">Pixabay</a>
+      </p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <a href="https://pixabay.com" target="_blank" rel="noopener noreferrer" class="pixabay-badge">
+      Powered by Pixabay
+    </a>
+  </footer>
+</main>

@@ -1,0 +1,165 @@
+/* ── Layout ── */
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem 4rem;
+  background: #f6f3ee;
+}
+
+/* ── Header ── */
+.site-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2.2rem, 6vw, 3.5rem);
+  font-weight: 700;
+  color: #2d1a0e;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.tagline {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  color: #db7b3d;
+  margin-top: 0.4rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* ── Card base ── */
+.card {
+  width: 100%;
+  max-width: 680px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 24px rgba(45, 26, 14, 0.10);
+}
+
+/* ── Bunny card ── */
+.image-link {
+  display: block;
+  line-height: 0;
+}
+
+.bunny-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.bunny-image:hover {
+  opacity: 0.92;
+}
+
+.card-footer {
+  padding: 0.9rem 1.2rem;
+  background: #faf8f5;
+  border-top: 1px solid #ede8e0;
+}
+
+.photo-credit {
+  font-size: 0.82rem;
+  color: #7a6652;
+}
+
+.photo-credit a {
+  color: #db7b3d;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.photo-credit a:hover {
+  text-decoration: underline;
+}
+
+/* ── Loading shimmer ── */
+.shimmer-card {
+  cursor: default;
+}
+
+.shimmer-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(90deg, #ede8e0 25%, #f6f3ee 50%, #ede8e0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+.shimmer-lines {
+  padding: 1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.shimmer-line {
+  height: 12px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #ede8e0 25%, #f6f3ee 50%, #ede8e0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+.shimmer-line.wide  { width: 60%; }
+.shimmer-line.narrow { width: 35%; }
+
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ── Error card ── */
+.error-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  text-align: center;
+  gap: 1rem;
+}
+
+.error-icon {
+  font-size: 3rem;
+}
+
+.error-message {
+  color: #7a6652;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* ── Footer ── */
+.site-footer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.pixabay-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: #9e8c7a;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 500;
+  border: 1px solid #d9d0c4;
+  border-radius: 6px;
+  padding: 0.3rem 0.7rem;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.pixabay-badge:hover {
+  color: #db7b3d;
+  border-color: #db7b3d;
+}
