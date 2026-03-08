@@ -9,6 +9,7 @@
       "Bash(npx ng:*)"
     ]
   },
+  "outputStyle": "Learning",
   "sandbox": {
     "enabled": true,
     "autoAllowBashIfSandboxed": true
