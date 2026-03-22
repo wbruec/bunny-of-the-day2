@@ -6,7 +6,9 @@
       "WebFetch(domain:github.com)",
       "WebFetch(domain:www.npmjs.com)",
       "WebFetch(domain:registry.npmjs.org)",
-      "Bash(npx ng:*)"
+      "Bash(npx ng:*)",
+      "Bash(cat /workspace/angular.json | python3 -c \"import sys,json; cfg=json.load\\(sys.stdin\\); print\\(json.dumps\\(cfg['projects']['bunny-of-the-day2']['architect']['test'], indent=2\\)\\)\" 2>&1)",
+      "Bash(cat /workspace/angular.json | python3 -c \"import sys,json; cfg=json.load\\(sys.stdin\\); print\\(json.dumps\\(list\\(cfg['projects']['bunny-of-the-day2']['architect'].keys\\(\\)\\), indent=2\\)\\)\" 2>&1)"
     ]
   },
   "outputStyle": "Learning",

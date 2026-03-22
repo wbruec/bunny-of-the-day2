@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "node scripts/set-env.js && ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "testbunny": "ng test --no-watch --browsers=ChromeHeadless"
   },
   "private": true,
   "dependencies": {
